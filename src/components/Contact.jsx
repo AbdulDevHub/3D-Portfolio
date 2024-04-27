@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react"
 import { motion } from "framer-motion"
-import emailjs from "@emailjs/browser"
 
 import { styles } from "../styles"
 import { EarthCanvas } from "./canvas"
@@ -27,41 +26,39 @@ const Contact = () => {
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    setLoading(true)
 
-    emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "JavaScript Mastery",
-          from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
-          message: form.message,
+    try {
+      const response = await fetch(formRef.current.action, {
+        method: "POST",
+        body: new FormData(formRef.current),
+        headers: {
+          Accept: "application/json",
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setLoading(false)
-          alert("Thank you. I will get back to you as soon as possible.")
+      })
 
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          })
-        },
-        (error) => {
-          setLoading(false)
-          console.error(error)
+      if (response.ok) {
+        setLoading(false)
+        document.getElementById("msg").innerHTML =
+          "Thank you. I will get back to you as soon as possible."
+        setForm({
+          name: "",
+          email: "",
+          message: "",
+        })
 
-          alert("Ahh, something went wrong. Please try again.")
-        }
-      )
+        setTimeout(() => {
+          document.getElementById("msg").innerHTML = ""
+        }, 5000)
+      } else {
+        setLoading(false)
+        throw new Error("Form submission failed")
+      }
+    } catch (error) {
+      setLoading(false)
+      console.error("Error!", error.message)
+    }
   }
 
   return (
@@ -78,6 +75,9 @@ const Contact = () => {
         <form
           ref={formRef}
           onSubmit={handleSubmit}
+          action="https://formspree.io/f/mrgwnkgq"
+          method="POST"
+          id="contactForm"
           className="mt-12 flex flex-col gap-8"
         >
           <label className="flex flex-col">
@@ -103,7 +103,7 @@ const Contact = () => {
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
-          
+
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Message</span>
             <textarea
@@ -122,6 +122,8 @@ const Contact = () => {
           >
             {loading ? "Sending..." : "Send"}
           </button>
+
+          <span id="msg" className="text-green-600 -mt-2 block"></span>
         </form>
       </motion.div>
 
