@@ -1,23 +1,21 @@
-# Abdul Khan's Portfolio Website
+# Abdul Hadi Khan's Basic Portfolio Website
 
-This is the source code for Abdul Khan's personal portfolio website. The website includes information about Abdul, his manifesto, projects, accomplishments, and work history. It was built using Vite.js and Three.js.
+<a href="https://abdulhadikhan.vercel.app/" target="_blank" rel="noreferrer"> 
+  <img height="400" src="public/Screenshot.png">
+</a>
 
-To view the website, simply [click this link](https://aquamarine-myriam-97.tiiny.site/)
+## Overview
 
-## Structure
+This repository contains the code for my personal 3D portfolio website. The website showcases my projects, skills, and experiences.
 
-The website is a single HTML file with the following sections:
+## Sections
 
-- **Header**: Contains the title and a welcome message.
-- **Manifesto**: A section dedicated to Abdul's personal manifesto.
-- **Projects**: Information about Abdul's various projects.
-- **Accomplishments**: Highlights of Abdul's accomplishments.
-- **Work History**: Details about Abdul's past work experiences.
-
-## Technologies Used
-
-- **Vite.js**: A build tool that aims to provide a faster and leaner development experience for modern web projects. It serves your code via native ES Module imports during development, allowing you to develop your single-page app without a bundler.
-- **Three.js**: A cross-browser JavaScript library and application programming interface used to create and display animated 3D computer graphics in a web browser.
+- **Overview**: A section that introduces me and my background.
+- **Experience**: A timeline of my work experience and education.
+- **Skills**: A rundown of my technical skills.
+- **Projects**: A showcase of my projects with links to the GitHub repositories.
+- **Testimonials**: A section with testimonials from professionals I have worked with.
+- **Contact**: A section with my contact information and social media links.
 
 ## Usage
 
