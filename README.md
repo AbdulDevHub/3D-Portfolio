@@ -1,4 +1,4 @@
-# Abdul Hadi Khan's Basic Portfolio Website
+# Abdul Hadi Khan's 3D Portfolio Website
 
 <a href="https://abdulhadikhan.vercel.app/" target="_blank" rel="noreferrer"> 
   <img height="400" src="public/Screenshot.png">
