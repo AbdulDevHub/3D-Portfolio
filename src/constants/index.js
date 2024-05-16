@@ -1,6 +1,7 @@
 import {
   mobile,
-  backend,
+  ui,
+  software,
   creator,
   web,
   javascript,
@@ -8,13 +9,15 @@ import {
   html,
   css,
   reactjs,
-  redux,
   tailwind,
-  nodejs,
-  mongodb,
   git,
   figma,
-  docker,
+  firebase,
+  nextjs,
+  puppeteer,
+  python,
+  unity,
+  vite,
   meta,
   starbucks,
   tesla,
@@ -35,6 +38,10 @@ export const navLinks = [
     title: "Work",
   },
   {
+    id: "projects",
+    title: "Projects",    
+  },
+  {
     id: "contact",
     title: "Contact",
   },
@@ -46,12 +53,16 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Mobile Developer",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
-    icon: backend,
+    title: "Software Developer",
+    icon: software,
+  },
+  {
+    title: "UI/UX Designer",
+    icon: ui,
   },
   {
     title: "Content Creator",
@@ -81,36 +92,36 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
     name: "Tailwind CSS",
     icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
   },
   {
     name: "Three JS",
     icon: threejs,
   },
   {
-    name: "git",
-    icon: git,
-  },
-  {
     name: "figma",
     icon: figma,
   },
   {
-    name: "docker",
-    icon: docker,
+    name: "firebase",
+    icon: firebase,
+  },
+  {
+    name: "next.js",
+    icon: nextjs,
+  },
+  {
+    name: "puppeteer",
+    icon: puppeteer,
+  },
+  {
+    name: "python",
+    icon: python,
+  },
+  {
+    name: "vite",
+    icon: vite,
   },
 ]
 
@@ -198,12 +209,12 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Opal Labs",
     description:
       "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
     tags: [
       {
-        name: "react",
+        name: "next.js",
         color: "blue-text-gradient",
       },
       {
@@ -217,6 +228,7 @@ const projects = [
     ],
     image: carrent,
     source_code_link: "https://github.com/",
+    demo_code_link: "https://opal-labs.vercel.app/",
   },
   {
     name: "Job IT",
@@ -238,9 +250,10 @@ const projects = [
     ],
     image: jobit,
     source_code_link: "https://github.com/",
+    demo_code_link: "https://github.com/",
   },
   {
-    name: "Trip Guide",
+    name: "Glisten AI",
     description:
       "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
     tags: [
@@ -259,6 +272,57 @@ const projects = [
     ],
     image: tripguide,
     source_code_link: "https://github.com/",
+    demo_code_link: "https://github.com/",
+  },
+  {
+    name: "AI Stock Web App",
+    description:
+      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+    tags: [
+      {
+        name: "next.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: carrent,
+    source_code_link: "https://github.com/",
+    demo_code_link: "https://github.com/",
+  },
+  {
+    name: "Acme De La Vie",
+    description:
+      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+    tags: [
+      {
+        name: "figma",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: carrent,
+    source_code_link: "https://github.com/",
+    demo_code_link: "https://github.com/",
+  },
+  {
+    name: "Car Dashboard",
+    description:
+      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+    tags: [
+      {
+        name: "figma",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: carrent,
+    source_code_link: "https://github.com/",
+    demo_code_link: "https://github.com/",
   },
 ]
 
