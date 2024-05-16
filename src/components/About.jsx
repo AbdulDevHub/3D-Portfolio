@@ -9,7 +9,7 @@ import { SectionWrapper } from "../hoc"
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
-    <Tilt className="xs:w-[250px] w-full">
+    <Tilt className="xs:w-[198px] w-full">
       <motion.div
         variants={fadeIn("right", "spring", index * 0.5, 0.75)}
         className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
@@ -36,24 +36,52 @@ const ServiceCard = ({ index, title, icon }) => {
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
+      <div className="flex flex-col justify-between sm:flex-row items-center">
+        <div>
+          <motion.div variants={textVariant()}>
+            <p className={styles.sectionSubText}>Introduction</p>
 
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
-      </motion.div>
+            <h2 className={styles.sectionHeadText}>Overview.</h2>
+          </motion.div>
 
-      <motion.p
-        variants={fadeIn()}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
-      >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
-      </motion.p>
+          <motion.p
+            variants={fadeIn()}
+            className="mt-4 text-secondary text-[17px] max-w-[50rem] leading-[30px]"
+          >
+            I'm Abdul Khan, a Computer Science student at the University of
+            Toronto 🎓. With a passion for web, app, and software development, I
+            have honed my skills in various programming languages and concepts.
+            Some of my interests are in Web Development 🧑‍💻, UX Design ✨, and
+            Artificial Intelligence 🛸. Beyond coding, I love exploring new
+            things that I can implement on my next project 🚀. In fact, I have a
+            <span
+              id="gradient-text"
+              className="text-red-400 cursor-pointer"
+              onClick={() =>
+                window.open(
+                  "https://www.youtube.com/@learningexpressway/videos",
+                  "_blank"
+                )
+              }
+            >
+              {" "}
+              YouTube channel
+            </span>{" "}
+            where I share AI and learning videos to help others level up their
+            skills 💯 and to express my love for new and practical technology.
+          </motion.p>
+        </div>
 
-      <div className="mt-20 flex flex-wrap gap-10">
+        <motion.div variants={fadeIn("left", "spring", 0.5, 0.75)}>
+          <img
+            src={"/logo.png"}
+            alt={"Profile Picture"}
+            className="rounded-full w-[18rem] h-[18rem] mt-10"
+          />
+        </motion.div>
+      </div>
+
+      <div className="mt-[4rem] flex flex-wrap gap-10">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
