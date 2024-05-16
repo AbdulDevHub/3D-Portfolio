@@ -6,7 +6,7 @@ import { styles } from "../styles"
 import { github } from "../assets"
 import { SectionWrapper } from "../hoc"
 import { projects } from "../constants"
-import { fadeIn, textVariant } from "../utils/motion"
+import { fadeIn, textVariant, zoomIn } from "../utils/motion"
 
 const ProjectCard = ({
   index,
@@ -15,16 +15,13 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  demo_code_link,
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+      <div
+        onClick={() => window.open(demo_code_link, "_blank")}
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full cursor-pointer waves-effect waves-light"
       >
         <div className="relative w-full h-[230px]">
           <img
@@ -34,24 +31,13 @@ const ProjectCard = ({
           />
 
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            {/* Live Url */}
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <img
-                src={github}
-                alt="source code"
-                className="w-1/2 h-1/2 object-contain"
-              />
-            </div>
-
             {/* Github Url */}
             <div
               onClick={() => window.open(source_code_link, "_blank")}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
             >
               <img
+                id="github_link"
                 src={github}
                 alt="source code"
                 className="w-1/2 h-1/2 object-contain"
@@ -75,7 +61,7 @@ const ProjectCard = ({
             </p>
           ))}
         </div>
-      </Tilt>
+      </div>
     </motion.div>
   )
 }
@@ -107,8 +93,21 @@ const Works = () => {
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
+
+      <motion.div 
+      variants={zoomIn(2, 2.5)}
+      className="flex justify-center mt-20">
+        <button
+          onClick={() =>
+            window.open("https://github.com/AbdulDevHub/", "_blank")
+          }
+          className="relative inline-flex h-fit w-fit rounded-full border border-blue-100/20 bg-blue-200/10 px-4 py-2 text-blue-200 outline-none ring-yellow-300 transition-colors after:absolute after:inset-0 after:-z-10 after:animate-pulse after:rounded-full after:bg-yellow-100 after:bg-opacity-0 after:blur-md after:transition-all after:duration-500 hover:border-yellow-200/40 hover:text-yellow-300 after:hover:bg-opacity-15 focus:ring-2"
+        >
+          See More
+        </button>
+      </motion.div>
     </>
   )
 }
 
-export default SectionWrapper(Works, "")
+export default SectionWrapper(Works, "projects")
