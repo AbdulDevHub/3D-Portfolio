@@ -48,9 +48,9 @@ const About = () => {
             variants={fadeIn()}
             className="mt-4 text-secondary text-[17px] max-w-[50rem] leading-[30px]"
           >
-            I'm Abdul Khan, a Computer Science student at the University of
-            Toronto 🎓. With a passion for web, app, and software development, I
-            have honed my skills in various programming languages and concepts.
+            I'm Abdul Hadi Khan, a Computer Science student at the University of
+            Toronto 🎓. With a passion for web, app, AI, and software development, I
+            have honed my skills in various languages and concepts.
             Some of my interests are in Web Development 🧑‍💻, UX Design ✨, and
             Artificial Intelligence 🛸. Beyond coding, I love exploring new
             things that I can implement on my next project 🚀. In fact, I have a
