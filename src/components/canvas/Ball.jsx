@@ -1,7 +1,7 @@
 import React, { Suspense, useState } from "react"
 import { Canvas } from "@react-three/fiber"
 import CanvasLoader from "../Loader"
-import { useSpring, a } from "@react-spring/three"
+import { a } from "@react-spring/three"
 
 import {
   Decal,
@@ -25,15 +25,7 @@ import zap from "/sounds/zap.ogg"
 
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl])
-  const [clicked, setClicked] = useState(false)
   const [color, setColor] = useState("#fff8eb")
-
-  const { rotation } = useSpring({
-    rotation: [0, 2 * Math.PI, 0],
-    config: { duration: 1000 },
-    reset: clicked,
-    onRest: () => setClicked(false),
-  })
 
   const [playBong] = useSound(bong, { volume: 1 })
   const [playDrop] = useSound(drop, { volume: 1 })
@@ -63,7 +55,6 @@ const Ball = (props) => {
     const playSound =
       soundActions[Math.floor(Math.random() * soundActions.length)]
     playSound()
-    setClicked(true)
     setColor("#" + Math.floor(Math.random() * 16777215).toString(16))
   }
 
@@ -77,7 +68,6 @@ const Ball = (props) => {
         receiveShadow
         scale={2.75}
         onClick={ballClicked}
-        rotation={rotation}
       >
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
