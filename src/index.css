@@ -11,6 +11,7 @@
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   color-scheme: dark;
+  cursor: url('assets/cursor.svg'), auto;
 }
 
 @keyframes color-rotate {
@@ -216,6 +217,11 @@
       -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.5),
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
+}
+
+/*----------------Cursor----------*/
+.cursor-pointer {
+  cursor: url('assets/pointer.svg'), auto !important;
 }
 
 /*----------------Scrollbar----------*/
