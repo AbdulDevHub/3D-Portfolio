@@ -224,6 +224,26 @@
   cursor: url('assets/pointer.svg'), pointer !important;
 }
 
+.cursor-pointer a{
+  cursor: url('assets/pointer.svg'), pointer !important;
+}
+
+.cursor-pointer div{
+  cursor: url('assets/pointer.svg'), pointer !important;
+}
+
+.cursor-pointer div div canvas{
+  cursor: url('assets/pointer.svg'), pointer !important;
+}
+
+button {
+  cursor: url('assets/pointer.svg'), pointer !important;
+}
+
+input {
+  cursor: url('assets/i-beam.svg'), text !important;
+}
+
 /*----------------Scrollbar----------*/
 ::-webkit-scrollbar {
   width: 10px;
