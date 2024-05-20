@@ -221,7 +221,7 @@
 
 /*----------------Cursor----------*/
 .cursor-pointer {
-  cursor: url('assets/pointer.svg'), auto !important;
+  cursor: url('assets/pointer.svg'), pointer !important;
 }
 
 /*----------------Scrollbar----------*/
