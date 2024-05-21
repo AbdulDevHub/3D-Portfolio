@@ -220,27 +220,19 @@
 }
 
 /*----------------Cursor----------*/
-.cursor-pointer {
-  cursor: url('assets/cursors/pointer.svg'), pointer !important;
-}
-
-.cursor-pointer a{
-  cursor: url('assets/cursors/pointer.svg'), pointer !important;
-}
-
-.cursor-pointer div{
-  cursor: url('assets/cursors/pointer.svg'), pointer !important;
-}
-
-.cursor-pointer div div canvas{
-  cursor: url('assets/cursors/pointer.svg'), pointer !important;
-}
-
+.cursor-pointer,
+.cursor-pointer a,
+.cursor-pointer span,
+.cursor-pointer img,
+.cursor-pointer h3,
+.cursor-pointer p,
+.cursor-pointer div,
+.cursor-pointer div div canvas,
 button {
   cursor: url('assets/cursors/pointer.svg'), pointer !important;
 }
 
-input {
+input, textarea {
   cursor: url('assets/cursors/i-beam.svg'), text !important;
 }
 
