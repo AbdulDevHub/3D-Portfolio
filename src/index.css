@@ -11,7 +11,7 @@
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   color-scheme: dark;
-  cursor: url('assets/cursor.svg'), auto;
+  cursor: url('assets/cursors/cursor.svg'), auto;
 }
 
 @keyframes color-rotate {
@@ -221,27 +221,27 @@
 
 /*----------------Cursor----------*/
 .cursor-pointer {
-  cursor: url('assets/pointer.svg'), pointer !important;
+  cursor: url('assets/cursors/pointer.svg'), pointer !important;
 }
 
 .cursor-pointer a{
-  cursor: url('assets/pointer.svg'), pointer !important;
+  cursor: url('assets/cursors/pointer.svg'), pointer !important;
 }
 
 .cursor-pointer div{
-  cursor: url('assets/pointer.svg'), pointer !important;
+  cursor: url('assets/cursors/pointer.svg'), pointer !important;
 }
 
 .cursor-pointer div div canvas{
-  cursor: url('assets/pointer.svg'), pointer !important;
+  cursor: url('assets/cursors/pointer.svg'), pointer !important;
 }
 
 button {
-  cursor: url('assets/pointer.svg'), pointer !important;
+  cursor: url('assets/cursors/pointer.svg'), pointer !important;
 }
 
 input {
-  cursor: url('assets/i-beam.svg'), text !important;
+  cursor: url('assets/cursors/i-beam.svg'), text !important;
 }
 
 /*----------------Scrollbar----------*/

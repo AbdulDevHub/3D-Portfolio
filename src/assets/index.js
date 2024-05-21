@@ -1,15 +1,15 @@
 // General
 import logo from "/logo.png"
-import github from "./github.png"
+import github from "./tech/github.png"
 import menu from "./menu.svg"
 import close from "./close.svg"
 
 // About
-import ui from "./ui.png"
-import software from "./software.png"
-import creator from "./creator.png"
-import mobile from "./mobile.png"
-import web from "./web.png"
+import ui from "./3d-icons/ui.png"
+import software from "./3d-icons/software.png"
+import creator from "./3d-icons/creator.png"
+import mobile from "./3d-icons/mobile.png"
+import web from "./3d-icons/web.png"
 
 // Tools
 import css from "./tech/css.png"
@@ -39,9 +39,9 @@ import starbucks from "./company/starbucks.png"
 import tesla from "./company/tesla.png"
 
 // Projects
-import carrent from "./carrent.png"
-import jobit from "./jobit.png"
-import tripguide from "./tripguide.png"
+import carrent from "./projects/carrent.png"
+import jobit from "./projects/jobit.png"
+import tripguide from "./projects/tripguide.png"
 
 export {
   logo,
